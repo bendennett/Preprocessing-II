@@ -1,5 +1,11 @@
 .home {
 
+  .top-section {
+    border-bottom: 2px dashed gray;
+    .text-content {
+      padding: 10px 0px;
+    }
+  }
   .content-section {
     margin: 30px 0;
     display: flex;
@@ -21,6 +27,18 @@
         border-radius: 10px;
       }
     }
+    
+    @media @mobile {
+      flex-direction: column;
+      
+      .text-content {
+        width: 96%;
+      }
+
+      .img-content {
+        width: 96%;
+      }
+    }
   }
 
   .inverse-content {
@@ -35,6 +53,10 @@
     .img-content {
       padding-right: 1%;
       padding-left: 0;
+    }
+
+    @media @mobile {
+      flex-direction: column-reverse;
     }
   }
 
@@ -56,6 +78,17 @@
     .destination {
       width: 30%;
       margin-bottom: 30px;
+    }
+
+    @media @mobile {
+      flex-direction: column;
+
+      .destination {
+        width: 80%;
+        justify-content: center;
+        text-align: left;
+        margin-left: 8%;
+      }
     }
   }
 }// home

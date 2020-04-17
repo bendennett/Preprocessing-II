@@ -1,1 +1,17 @@
 // Mixins in here
+.buttonclass (@radius, @color) {
+    border-radius: @radius;
+    background-color: @color;
+}
+
+.btn {
+    display: flex;
+    font-size: 1.3rem;
+    color: white;
+    width: 80%;
+    height: 3rem;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    .buttonclass(10px, darkcyan)
+}
